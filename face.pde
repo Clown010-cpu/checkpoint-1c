@@ -19,7 +19,7 @@ void face(int x, int y, float s){
   skin();
   hair();
   eye(250,200); //left
-  eye(150,200); //right
+  eye(); //right
   mouth();
   
 
@@ -54,11 +54,11 @@ void eye(int x, int y){
   
 }
 
-void eye(int x, int y){
+void eye(){
   fill(#FAFAF5);
-  ellipse(x,y,50,50);
+  ellipse(150,200,50,50);
   fill(0);
-  circle(x,y,25);
+  circle(150,200,25);
   
 }
 
