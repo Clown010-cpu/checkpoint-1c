@@ -4,20 +4,22 @@ void setup() {
 
 void draw(){
   background(#FFFFF7);
-  face(300, 100); //x, y
-  face(350,200);
+  face(300, 100, 0.6); //x, y
+  face(350,200, 0.8);
   
    println(mouseX, mouseY);
 }
  
-void face(int x, int y){
+void face(int x, int y, float s){
   pushMatrix();
   translate(x, y);
+  scale(s);
+  rotate(PI/-6);
   
   skin();
   hair();
   eye(250,200); //left
-  eye(); //right
+  eye(150,200); //right
   mouth();
   
 
@@ -52,11 +54,11 @@ void eye(int x, int y){
   
 }
 
-void eye(){
+void eye(int x, int y){
   fill(#FAFAF5);
-  ellipse(150,200,50,50);
+  ellipse(x,y,50,50);
   fill(0);
-  circle(150,200,25);
+  circle(x,y,25);
   
 }
 
